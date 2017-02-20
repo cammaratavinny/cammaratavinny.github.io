@@ -1,0 +1,25 @@
+body
+{
+	background-color:SkyBlue;
+	color:Green;
+	font-family: Arial;
+
+}
+	a:link {
+		background-color: yellow;
+		
+			}
+	a:visited {
+		background-color: cyan;
+		
+	}
+	a:hover {
+		background-color: red;
+		
+			}
+	a:active {
+		background-color: blue;
+		
+			}
+			
+td:hover{background-color:#f5f5f5}
