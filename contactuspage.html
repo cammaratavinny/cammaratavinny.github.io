@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 	<head>
+	<script>
+	function validateForm() {
+		var x = document.forms["myForm"]["fname","fnam1","fname2"].value;
+		if (x == "") {
+			alert("Something was left blank.");
+			return false;
+		}
+	}
+	</script>	
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<meta charset="utf-8">
 		<div class="handl">
@@ -11,6 +20,7 @@
 		</div>
 	</head>
 	<body>
+		
 		<a href="https://cammaratavinny.github.io">HOME</a>	
 		<div class="headingg">
 		<link rel="stylesheet" href="styleposition.css" type="text/css">
@@ -19,24 +29,40 @@
 		
 		<h2> Contact Us </h2>
 		<p> Feel free to contact us if you have any questions or concerns! We'd love to hear from you!<br>Just Fill out the form below and we will reply via e-mail!
-		<form>
-				First name:<br>
-				<input type="text" name="firstname"><br>
-				Last name:<br>
-				<input type="text" name="lastname"><br>
-				Email:<br>
-				<input type="text" name="email"><br>
-				<input type="radio" name="inputtype" value="Question" checked> Question<br>
-				<input type="radio" name="inputtype" value="Problem"> Problem<br>
-				<input type="radio" name="inputtype" value="Order Status Update"> Order Status Update<br><br>
-				Write your comment below!<br>
-				<textarea name "comment" rows = "12" cols="36"> </textarea><br><br>
+		<form name="myForm" action="/action_page_post.php"
+			onsubmit="return validateForm()" method="post">
+				First Name: <input type="text" name="fname">
+				<br>
+				<br>
+				Last Name: <input type="text" name="fname1">
+				<br>
+				<br>
+				Email: <input type="text" name="fname2">
+				<br>
+				<input type="radio" name="inputtype" value="Question" checked> Question
+				<br>
+				<input type="radio" name="inputtype" value="Problem"> Problem
+				<br>
+				<input type="radio" name="inputtype" value="Order Status Update"> Order Status Update
+				<br>
+				<br>
+								Write a comment!
+
+				<br>
+				<textarea name "comment" rows = "12" cols="36"> </textarea>
+				<br>
+				<br>
 				<input type="reset">
+				<input type="submit" value="Submit">				
 			
 		</form>
-		<form action="https://cammaratavinny.github.io/thankyou.html">
-			<input type="submit" value="Submit" />
-		</form>
 		</div>
+	
 		</body>
+		<p id="date"></p>
+
+		<script>
+		var d = new Date();
+document.getElementById("date").innerHTML = d.toDateString();
+		</script>
 </html>
