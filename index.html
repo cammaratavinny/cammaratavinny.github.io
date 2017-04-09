@@ -83,68 +83,37 @@
 
 </body>
 </html>
-	<script>
-	function validateForm() {
-		var x = document.forms["myForm"]["fname","fnam1","fname2"].value;
-		if (x == "") {
-			alert("Something was left blank.");
-			return false;
-		}
-	}
-	</script>	
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<meta charset="utf-8">
+		
 		<div class="handl">
 		<link rel="stylesheet" href="styleposition.css" type="text/css">
-
 		<h1>Rugsnakes <img src="http://snake-cartoon-images.clipartonline.net/_/rsrc/1467889959335/home/cartoon-snake_5.png?height=320&width=320" width="50" height="50"></h1>
 		
 		</div>
+			
 	</head>
 	<body>
+	
+		<link rel="stylesheet" href="style2.css" type="text/css">
 		
+		<div class="links">
+		<link rel="stylesheet" href="styleposition.css" type="text/css">
+
+		</div>
 		
 		<div class="headingg">
 		<link rel="stylesheet" href="styleposition.css" type="text/css">
-
-		<link rel="stylesheet" href="style2.css" type="text/css">
-		
-		<h2> Contact Us </h2>
-		<p> Feel free to contact us if you have any questions or concerns! We'd love to hear from you!<br>Just Fill out the form below and we will reply via e-mail!
-		<form name="myForm" action="/action_page_post.php"
-			onsubmit="return validateForm()" method="post">
-				First Name: <input type="text" name="fname">
-				<br>
-				<br>
-				Last Name: <input type="text" name="fname1">
-				<br>
-				<br>
-				Email: <input type="text" name="fname2">
-				<br>
-				<input type="radio" name="inputtype" value="Question" checked> Question
-				<br>
-				<input type="radio" name="inputtype" value="Problem"> Problem
-				<br>
-				<input type="radio" name="inputtype" value="Order Status Update"> Order Status Update
-				<br>
-				<br>
-								Feel Free To Write A Comment!
-
-				<br>
-				<textarea name "comment" rows = "12" cols="36"> </textarea>
-				<br>
-				<br>
-				<input type="reset">
-				<input type="submit" value="Submit">				
-			
-		</form>
+		<p> Welcome to Rugsnakes! We sell the finest rugs and carpets! Don't shop at any store ran by rug rats, shop at Rugsnakes! </p>
+		<img src="http://www.clipartkid.com/images/6/carpet-clipart-carpet-clip-art-coipi3-clipart.gif">
 		</div>
-	
-		</body>
+		
+	</body>
 		<p id="date"></p>
 
 		<script>
-		var d = new Date();
+var d = new Date();
 document.getElementById("date").innerHTML = d.toDateString();
-		</script>
+		</script>	
+
 </html>
