@@ -1,0 +1,146 @@
+<html>
+	<body>
+		
+	
+	
+		
+		
+		
+		
+<script>
+	function myMove() 
+{
+  var elemPink = document.getElementById("pink");
+  var elemPinkWin = document.getElementById("pinkwin");
+  var elemPurple = document.getElementById("purple");
+  var elemPurpleWin = document.getElementById("purplewin");
+  
+  var posPink = 0;
+  var posPurple = 0;
+
+  var hasWinner = false;
+  elemPinkWin.style.display = 'none';
+  elemPurpleWin.style.display = 'none';
+  
+  var id = setInterval(frame, 5);
+  function frame()
+  {
+    if(posPink >= 350 && posPurple >= 350)
+    {
+      clearInterval(id);
+      return;
+    }
+
+    if(posPink < 350)
+    {
+      posPink += Math.round(Math.random()*10);
+      if(posPink >= 350)
+      {
+        posPink = 350;
+        if(!hasWinner){
+          hasWinner = true;
+          elemPinkWin.style.display = 'unset';
+        }
+      }
+      elemPink.style.left = posPink + 'px';
+    }
+
+    if(posPurple < 350)
+    {
+      posPurple += Math.round(Math.random()*10);
+      if(posPurple >= 350)
+      {
+        posPurple = 350;
+        if(!hasWinner){
+          hasWinner = true;
+          elemPurpleWin.style.display = 'unset';
+        }
+      }
+      elemPurple.style.left = posPurple + 'px';
+    }
+  }
+}
+
+</script>
+
+<style>
+  body {
+    overflow: hidden;
+  }
+
+  #pink {
+    position: absolute;
+    top: 31pc;
+    width: 17pc;
+    left: -.5pc;
+  }
+
+  #purple {
+    position: absolute;
+    width: 15pc;
+    top: 20pc;
+  }
+  
+  #pinkwin {
+    position: absolute;
+    right: 1pc;
+    top: 31pc;
+    display: none;
+  }
+  
+  #purplewin {
+    position: absolute;
+    right: 1pc;
+    top: 20pc;
+    display: none;
+  }
+
+  body {
+    ")
+  }
+
+  .finishline {
+    position: absolute;
+    right: -12pc;
+    top: 18pc;
+  }
+
+
+
+
+
+  /*#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+  }
+
+  #animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: red;
+  }*/
+</style>
+
+<img id="pink" src="https://static.giantbomb.com/uploads/original/0/9566/393088-gameboy_color_2.jpg" height="200px" width="100">
+<img id="purple" src="https://www.lukiegames.com/assets/images/GBC/GBC_SYSTEM_GRAPE.jpg"  height="200px" width="100">
+<img src="" class="finishline">
+
+<img id="pinkwin" src="http://i.imgur.com/XFrXV9w.png">
+<img id="purplewin" src="http://i.imgur.com/GUdkqxr.jpg">
+
+<p>
+  <button src ="https://img.clipartfest.com/f9ce95fa19a9373d9d4cb270133b2cb0_traffic-light-red-clip-art-red-stoplight-clipart_680-782.svg" onclick="myMove()">Race</button>
+</p>
+
+<div id="container">
+  <div id="animate"></div>
+</div>
+	</body>
+
+
+
+
+</html>
